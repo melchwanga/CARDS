@@ -22,12 +22,6 @@ namespace CARDS.Business
 			{
 				relationship.DeleteBehavior = DeleteBehavior.Restrict;
 			}
-			/*
-			builder.Entity<ApplicationUser>().HasOne(bc => bc.Status);
-			
-			builder.Entity<SystemCodeDetail>().HasOne(bc => bc.ModifiedBy);
-			builder.Entity<SystemCodeDetail>().HasOne(bc => bc.CreatedBy);
-			*/
 			
 			builder.Entity<SystemCodeDetailsView>().HasNoKey().ToTable("SystemCodeDetailsView", t => t.ExcludeFromMigrations());
 			builder.Entity<UsersView>().HasNoKey().ToTable("UsersView", t => t.ExcludeFromMigrations());
@@ -40,7 +34,6 @@ namespace CARDS.Business
 
 		public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 		public DbSet<ApplicationRole> ApplicationRoles { get; set; }
-		//public DbSet<Permission> Permissions { get; set; }
 		public DbSet<SystemCode> SystemCodes { get; set; }
 		public DbSet<SystemCodeDetail> SystemCodeDetails { get; set; }
 		public DbSet<Card> Cards { get; set; }

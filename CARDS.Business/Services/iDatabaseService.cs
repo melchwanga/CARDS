@@ -19,8 +19,6 @@ namespace CARDS.Business.Services
 
 	public class DatabaseService : IDatabaseService
 	{
-		//protected readonly IDatabaseRepository GenericRepository;
-
 		public DatabaseService()
 		{
 			//GenericRepository = iRepository;
@@ -66,7 +64,7 @@ namespace CARDS.Business.Services
 
 		public void Dispose()
 		{
-			//GenericRepository.Dispose();
+			
 		}
 	}
 }

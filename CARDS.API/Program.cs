@@ -41,11 +41,7 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddCors();
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-/*
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-	 .AddJwtBearer();
-builder.Services.AddAuthorization();
-*/
+
 builder.Services.AddTokenAuthentication(builder.Configuration);
 
 builder.Services.AddControllers().AddNewtonsoftJson(
